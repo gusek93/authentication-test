@@ -32,7 +32,6 @@ class UserManager(BaseUserManager):
         return user
 
 
-
 class User(AbstractBaseUser, BaseModel, SoftDeleteModel):
     email = models.EmailField('이메일', max_length=255, unique=True)
     name = models.CharField('이름', max_length=100)
